@@ -4,7 +4,6 @@ All_data/
 model.png
 models/
 ResNet101.9605532.err
-ResNet101.9605532.out VGG19.9605568.err VGG19.9605568.out
 VGG19.9605568.err
 VGG19.9605568.out
 ResNet101.9605532.out
