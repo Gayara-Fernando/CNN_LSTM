@@ -173,7 +173,7 @@ es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', restore_best_weights =
 history = cnn_lstm.fit(train_gen,
           validation_data = val_gen, steps_per_epoch=steps_per_epoch, 
                                   validation_steps=validation_steps,           
-          epochs = 100, callbacks = [es])
+          epochs = 30, callbacks = [es])
 
 
 # save this model
@@ -199,7 +199,7 @@ es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', restore_best_weights =
 history_new = cnn_lstm.fit(train_gen,
           validation_data = val_gen, steps_per_epoch=steps_per_epoch, 
                                   validation_steps=validation_steps,           
-          epochs = 100, callbacks = [es])
+          epochs = 30, callbacks = [es])
 
 
 # save this model
