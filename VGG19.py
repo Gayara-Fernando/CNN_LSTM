@@ -163,7 +163,7 @@ validation_steps = int(np.ceil(len(validation_feature_maps) / generator_batch_si
 
 
 # compile the model
-opt = tf.keras.optimizers.Adam(learning_rate=0.0001)
+opt = tf.keras.optimizers.Adam(learning_rate=0.00001)
 cnn_lstm.compile(loss='mean_squared_error', optimizer=opt, metrics = ['mean_absolute_error'])
     
 # add early stopping
@@ -173,7 +173,7 @@ es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', restore_best_weights =
 history = cnn_lstm.fit(train_gen,
           validation_data = val_gen, steps_per_epoch=steps_per_epoch, 
                                   validation_steps=validation_steps,           
-          epochs = 100, callbacks = [es])
+          epochs = 30, callbacks = [es])
 
 
 # save this model
@@ -189,7 +189,7 @@ new_model.summary()
 cnn_lstm.summary()
 
 # compile the model
-opt = tf.keras.optimizers.Adam(learning_rate=0.0001)
+opt = tf.keras.optimizers.Adam(learning_rate=0.00001)
 cnn_lstm.compile(loss='mean_squared_error', optimizer=opt, metrics = ['mean_absolute_error'])
     
 # add early stopping
@@ -199,7 +199,7 @@ es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', restore_best_weights =
 history_new = cnn_lstm.fit(train_gen,
           validation_data = val_gen, steps_per_epoch=steps_per_epoch, 
                                   validation_steps=validation_steps,           
-          epochs = 100, callbacks = [es])
+          epochs = 30, callbacks = [es])
 
 
 # save this model
